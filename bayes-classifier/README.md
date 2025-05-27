@@ -10,7 +10,11 @@ This project implements a Bayes classifier that:
 - Classifies images into K classes using Gaussian distributions
 - Achieves >96% test accuracy on car and vehicle classification tasks
 
+📚 **Complete handwritten notes** detailing the mathematical derivations and implementation decisions are included in the repository.
+
 ## 📐 Theory
+
+📚 **[Full Handwritten Notes Available (PDF)](./Bayes-Classification-Notes.pdf)** - Detailed mathematical derivations and implementation notes
 
 ### Bayes Classification
 
@@ -48,6 +52,18 @@ k* = argmax [-1/2 log|Σₖ| - 1/2(x-μₖ)ᵀΣₖ⁻¹(x-μₖ) + log P(y=k)]
       k∈C
 ```
 
+## 📝 Detailed Mathematical Notes
+
+For a complete understanding of the theory and implementation, see the **[handwritten notes (PDF)](./Bayes-Classification-Notes.pdf)** which cover:
+
+- **Pages 1-2**: One-hot encoding and matrix formulations for K classes
+- **Pages 3-4**: Posterior probability derivation and Gaussian conditional distributions
+- **Pages 5-6**: Multi-variate Gaussian formula and log-probability transformations
+- **Page 7**: Feature extraction with DINO and dimensionality challenges
+- **Page 8**: PCA for compression and numerical stability
+
+These notes bridge the gap between the mathematical theory and the actual Python implementation.
+
 ## 🚀 Features
 
 - **DINO Feature Extraction**: Uses DINOv2-giant model for powerful visual representations
@@ -60,15 +76,16 @@ k* = argmax [-1/2 log|Σₖ| - 1/2(x-μₖ)ᵀΣₖ⁻¹(x-μₖ) + log P(y=k)]
 
 ```
 .
-├── bayes.py                # Core Bayes classifier implementation
-├── extract_features.py     # DINO feature extraction script
-├── BayesClassifier.ipynb  # Example usage notebook
-├── dataset/               # Dataset directory
-│   ├── train/            # Training images
+├── bayes.py                        # Core Bayes classifier implementation
+├── extract_features.py             # DINO feature extraction script
+├── BayesClassifier.ipynb          # Example usage notebook
+├── Bayes-Classification-Notes.pdf  # Handwritten theory & implementation notes
+├── dataset/                       # Dataset directory
+│   ├── train/                    # Training images
 │   │   ├── class1/
 │   │   ├── class2/
 │   │   └── ...
-│   └── test/             # Test images
+│   └── test/                     # Test images
 │       ├── class1/
 │       ├── class2/
 │       └── ...
